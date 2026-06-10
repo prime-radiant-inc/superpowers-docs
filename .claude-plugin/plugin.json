@@ -1,0 +1,11 @@
+{
+  "name": "superpowers-docs",
+  "version": "0.1.0",
+  "description": "A documentation department in a box: studies a project and its readers, decides the doc portfolio with you, writes contributor/user/adopter docs with verified claims, and keeps them true as the code moves",
+  "author": {
+    "name": "Jesse Vincent",
+    "url": "https://github.com/obra"
+  },
+  "license": "MIT",
+  "keywords": ["documentation", "docs", "tech-pubs", "marketing", "verification", "maintenance"]
+}
