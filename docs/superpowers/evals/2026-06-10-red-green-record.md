@@ -175,6 +175,25 @@ writing-clearly-and-concisely (vendor it into the plugin); plain English
 that reads like an experienced published writer; zero contrastive
 negation; zero em dashes.
 
+## GREEN 7 — brochure site under the revised flow (clipfan): PASS
+
+The RED 6 directives, re-run end to end (2026-06-11). Everything RED 6
+rejected is fixed in the artifact, mechanically confirmed: **0 em dashes**
+(was 18), **0 contrastive negation**, the problem in its own unresolved
+`#problem` section, a scrolling GitHub Pages-ready `docs/index.html`
+(19.7 KB, zero JS, sentinel + per-section citations), publication-writer
+voice throughout ("Your Mac and Linux machines share one clipboard.").
+**The tightened gate fired on its first test** — four questions (voice,
+cast, section plan, and an unprompted-but-correct fourth: how far the
+live demo may go on the human's real fleet) despite the pre-authorized
+scope. The demo output is real (live daemon round-trip; clipboard saved
+and restored). Two adversarial passes (markdown, then render) caught an
+absolute overclaim, citation gaps, missing Owns globs, and a hero
+headline that silently dropped "Mac and Linux" (inheritance violation) —
+all fixed before the stamp (3 honest external-truth deferrals). One run
+mechanic: the worker ended a turn mid-plan once and needed a "continue"
+nudge — harness behavior, not flow text.
+
 ## Operational lessons (run mechanics, not skill defects)
 
 - Never `tmux resize-window` while a worker's TUI modal is open — it
