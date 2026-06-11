@@ -1,0 +1,33 @@
+Done — all five phases complete. Everything is in the working tree, uncommitted, for your review (the audit flow deliberately doesn't commit).
+
+## What docs this project needs
+
+The doc *set* is in good shape structurally — right files, right altitudes, healthy cross-referencing. What it needed most was **truth repair** (done, below). What it still genuinely needs, each with a named reader:
+
+1. **A "Safe mode" section in TROUBLESHOOTING** — highest-value gap. A user who hand-edits `listen` (the README invites editing config.json) lands in safe mode where peer sync *and* the ⇧⌘V panel all return 409, and no doc explains what happened or how to exit (app repair button, or `listen: 127.0.0.1:7853` + restart). Related: `local-fleet-reset` ships live, gated on a confirm phrase, with zero operator documentation.
+2. **The SSH provisioning trust model in SECURITY.md** — per-host ed25519 sync keys, command-locked `ssh-gateway` forced commands in `authorized_keys`, pinned known_hosts, and `--trust-keyscan` TOFU appear in zero evergreen docs. The reader is anyone security-reviewing a fleet host who finds clipfan entries in `~/.ssh/authorized_keys`. (SECURITY's `Owns` globs in the index should grow `internal/sshprovision/**` when this is written.)
+3. **Fleet lifecycle in README/TROUBLESHOOTING** — removing a host (the UI ships "Remove host"; `clipfan remove-host` exists for headless cases; nothing documents either), and a "run `clipfan mesh-heal --trust-keyscan`" step in the peers-aren't-syncing checklist (mesh repair currently lives only in point-in-time plans).
+4. **A short "Daemon supervision" subsection in ARCHITECTURE** — who starts the daemon when (launchd vs app child-launch) and which log each path writes; TROUBLESHOOTING already leans on this distinction without explaining it. Plus a three-line safe-mode note under the API table (`/v1/status`, `/v1/ssh/logs`, `/v1/config/listener` exist in no doc).
+5. **A note that provisioned configs carry machine-managed fields** — `config_version`, `hostname`, `transport`, the `ssh` peer block, and key material under `~/.config/clipfan/ssh/`; README documents 6 of ~12 user-visible fields and invites hand-editing.
+6. **A minimal `docs/DICTIONARY.md` (~6 entries)** — two disputes are actively drifting: "menubar" (all docs) vs "menu bar" (CHANGELOG flipped mid-stream at v1.0.2, four releases this week), and peer/host/device (onboarding says "device", Settings says "Add peer…" but "Remove host"). The menubar-vs-menu-bar pick and the host/peer rule are your calls, so I didn't create it.
+
+You declined CLAUDE.md, which I've respected. I'd also flag for a future pass: trimming building-from-source's verbatim copy of README's onboarding paragraphs and RELEASING's copy of the dev build path down to pointers — both are drift magnets (RELEASING had already drifted by one token), but that's content removal I didn't want to do without you seeing it.
+
+## What I changed (216 insertions, 166 deletions across 13 files + new `docs/INDEX.md`)
+
+- **Killed the pre-mesh era from the evergreen docs.** README and ARCHITECTURE said "the Mac is the relay hub; non-Mac peers don't relay" — Add-peer has provisioned a full bidirectional SSH mesh since v0.4/v1.0 and every daemon relays. TROUBLESHOOTING told users to check firewalls on port 7853 (peer sync is SSH on port 22; 7853 is loopback-only) and described the peer-version-flagging UI removed in v1.0.0.
+- **Fixed ARCHITECTURE's auth section**, which documented the legacy signature scheme that config-v2 daemons now reject — it now describes the HKDF-derived key, the `X-Clipfan-Auth-Version` header, and the real canonical string; also `POST /v1/current` 204→200, the missing routes, default listen `127.0.0.1:7853`, and five missing packages + one missing cmd in the module layout.
+- **Corrected mechanism misstatements**: SECURITY/ARCHITECTURE claimed the recipient is "inside the encrypted payload" (it's a cleartext envelope field; the rejection works); tmux socket check is world-writable-only; emacs copy-mode binds `M-w`, not `y`/`Enter`; the Local Network caveat now says the app sidesteps the gate by child-launching the daemon (it claimed only a manual workaround existed); TROUBLESHOOTING's wrong Settings tab and missing `/tmp/clipfan-shell.log` path.
+- **Rewrote ROADMAP** (as approved): dropped the shipped "path to 1.0" framing, moved Sparkle/notarization/releases/onboarding/icon into a current-behavior Shipped section, reframed the dead SSE plan as event-driven *detection* (peer delivery is already push), kept the honest planned/stretch items.
+- **`bash install.sh`** everywhere building-from-source said `./install.sh` (it's committed non-executable).
+- **Four supersede banners** on point-in-time docs (mesh plan → machinery notes; hybrid-SSH handoff + full design → 3-host MVP plan; first-run onboarding spec → mesh-onboarding wizard), bodies untouched; CI fixture doc's dead 17d3a/17d3b milestone refs re-expressed in current terms.
+- **Created `docs/INDEX.md`** — the classification of record with ownership globs, wired for `docmaint stale` incremental re-audits; all eight evergreen docs now carry last-reviewed stamps at `5ed989c` with honest deferred counts (12 total, all external-ground-truth claims like macOS gate behavior and GitHub secret state).
+
+Process: 9 claim-verification agents (one per evergreen doc, every verdict cited to enacting code), 2 competing adversarial reviewers over my own diff (they caught 3 real errors I'd introduced — including a self-contradiction and a false gate equation — all fixed), 2 corpus-level agents for duplication/coverage/terminology.
+
+## Non-doc findings worth your attention
+
+- **CI runs no `go test ./...` job at all** — only the targeted gate-package test inside the release workflow.
+- The CI fixture policy doc's requirements are largely unenforced: no self-hosted runner label exists, no release-blocking fixture wiring in release.yml even though SSH is now the only shipped transport, the readiness probe's ssh calls don't pass `-F none` (they read the runner user's `~/.ssh/config`), and no secret-residue/redaction checks exist.
+- **ABOUT.md is stale** (claims HTTP broadcast transport) but is generated — needs a maintaining-project-map regeneration, not a hand edit.
+- `dist/install.sh`'s header documents a `UNIT_NAME` env var the script never uses; `docs/images/capture.sh` is an orphan (no images exist, nothing references it); six hand-run `test-*.sh` scripts have no doc mention and no CI wiring, so their status as part of the release bar is undiscoverable.
