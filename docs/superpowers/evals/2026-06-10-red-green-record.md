@@ -148,6 +148,33 @@ report. Candidate flow tightening (Iron Law applies before any edit): "a
 broad instruction is not the batch confirm; the gate asks its specific
 questions even when scope arrives pre-authorized."
 
+## RED 6 — human review of GREEN 5's artifact (2026-06-11)
+
+The project owner reviewed the clipfan deck and rejected four things the
+flow-as-written permitted — this is the failing test for the next round
+of flow edits:
+
+1. **Problem and promise mixed in one beat**: slide 2 is titled "What you
+   get" but its body is the problem statement (isolated clipboards,
+   OSC 52 half-works, images have no path). The story law said "problem
+   beat first" but never said "in its own beat, unresolved."
+2. **Wrong default voice for the genre**: engineer/mechanism register for
+   an adopter audience that should be read as less technical and sold
+   the benefit.
+3. **AI prose tells survived the auditor**: 18 em dashes; contrastive
+   negation as a selling device ("keeps outsiders out, not a bad
+   insider") — the slop list's one-per-artifact X-not-Y budget is too
+   loose for this genre, and em dashes weren't banned at all.
+4. **Wrong artifact class**: a keynote deck, when the reader's real
+   moment is "landing on a product page" — a brochure site suitable for
+   GitHub Pages.
+
+Owner's directives: default the brochure to a benefit-selling voice for
+a less technical reader; render a brochure website, not a deck; REQUIRE
+writing-clearly-and-concisely (vendor it into the plugin); plain English
+that reads like an experienced published writer; zero contrastive
+negation; zero em dashes.
+
 ## Operational lessons (run mechanics, not skill defects)
 
 - Never `tmux resize-window` while a worker's TUI modal is open — it

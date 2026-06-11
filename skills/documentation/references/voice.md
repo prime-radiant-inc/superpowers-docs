@@ -35,16 +35,20 @@ A `## Voice` section may start from a preset by name and override fields:
 
 ## Resolution and confirmation
 
-Project `## Voice` → else a preset below (default: **the engineer**). The
+Project `## Voice` → else a preset below. Defaults by genre: **the
+publication writer** for adopter-facing artifacts (BROCHURE.md, the
+brochure site, README intros); **the engineer** everywhere else. The
 resolved voice is confirmed with the human at the same batch gate as the
 cast/doc-set plan. One artifact, one voice — acts change audience, never
 speaker.
 
-## The four presets
+## The five presets
 
-Each preset is a proof type. All four were validated by rendering one
+Each preset is a proof type. Presets 1–4 were validated by rendering one
 complete real-project deck in each — same claims, same citations, voice
-the only variable.
+the only variable. Preset 5 was born from an owner-review failing test
+(the deck-era brochure read as machine prose to its first human reviewer)
+and is exercised by every brochure-site render since.
 
 ### 1. The engineer who built it (default) — proof by mechanism
 
@@ -82,7 +86,34 @@ pending maker interview" note on every biographical line's slide and in
 the close.
 Signature: *"I was treating my laptop like a hospital ward."*
 
-A considered-and-rejected fifth, the *skeptical reviewer*: first-party
+### 5. The publication writer (default for adopter artifacts) — proof by benefit made concrete
+
+Speaker: a professional writer with real publication experience, writing
+for a smart reader who does not live in the terminal. Sell the benefit:
+lead with what the reader can do now, in their day, in their words; the
+mechanism sits one layer down, carried by the citations and the owner
+section. Plain English: short declarative sentences; everyday words;
+a project term appears only when the dictionary requires it, defined in
+passing. Read `references/elements-of-style.md` before drafting — it is
+required for this voice, not optional.
+
+Hard rules, on top of the slop-tell list:
+
+- **No contrastive negation, ever.** Zero budget, not one. Never define
+  the product by what it isn't ("not X, but Y"; "X, not Y"). State the
+  positive fact. A verifiable architectural absence ("there is no
+  central server") is a fact and stays; rhetoric-by-negation goes.
+- **No em dashes in copy.** Restructure into separate sentences, or use
+  a comma, colon, or period. If a sentence needs an em dash to hold
+  together, it is two sentences.
+- Benefits must still cash (hub law): every benefit traces to the cited
+  capability that delivers it. Selling the benefit never licenses
+  inventing one.
+
+Signature: *"Copy on your Mac. Paste into the SSH session on your Linux
+box. It is already there."*
+
+A considered-and-rejected sixth, the *skeptical reviewer*: first-party
 ventriloquism of your own critic is manipulation-adjacent, and
 limitations-by-bearer already delivers that candor structurally, where
 it's verifiable.

@@ -1,9 +1,13 @@
-# Marketing flow: BROCHURE.md → brochure.html, README hook
+# Marketing flow: BROCHURE.md → the brochure site, README hook
 
 Law lives in the hub (claims-must-cash incl. the performer rule, honesty
 floor, story law, voice law, regeneration rule, the gates). This flow adds
 the genre's process. Craft companions: voice.md (speaker, slop tells,
-exemplar test), brochure-design.md (the rendered deck's visual standard).
+exemplar test), brochure-design.md (the brochure site's visual standard),
+and **elements-of-style.md — required reading before drafting any adopter
+copy.** This genre defaults to the publication-writer voice (voice.md
+preset 5): a less technical reader, sold the benefit, in plain English
+with that preset's hard bans (no contrastive negation, no em dashes).
 
 ## The cast
 
@@ -25,7 +29,10 @@ performer rule decides).
 
 1. **Full study** (portfolio.md): confirm the index, the cast for this
    project, and the resolved voice (voice.md) — **one batched human
-   gate** before any writing.
+   gate** before any writing. **A broad instruction is not the batch
+   confirm**: even when the human pre-authorized scope ("make the
+   brochure"), the gate still asks its specific questions — voice, cast,
+   section plan — because those weren't in the instruction.
 2. **Write the thesis first** (story law): one sentence; every section
    and slide must advance it.
 3. **`docs/BROCHURE.md`** — the canonical positioning document, governed
@@ -38,17 +45,19 @@ performer rule decides).
    them; getting started, one path per cast member. **Owns rule:** the
    enacting surfaces of the capabilities it names — not the whole tree.
    Every capability bullet carries its cash.
-4. **Render `docs/brochure.html`** per brochure-design.md. Content is
-   inherited: a capability appears in the deck only if BROCHURE.md
-   carries it verified. The arc is three acts plus a close — Act I what
-   you get (user; problem beat, then transformation; the user is the
-   subject of every verb; zero architecture), Act II using it (user;
-   real commands), Act III running it (owner; engineering register; the
-   warm-accent shift), close: one door per cast member plus the
-   contributor pointer. One voice throughout; acts change audience,
-   never speaker. First line is the sentinel (brochure-design.md); no
-   index row for the rendered file — BROCHURE.md's row carries the
-   claims, the sentinel keeps `scan` off the render.
+4. **Render the brochure site, `docs/index.html`**, per
+   brochure-design.md — a single scrolling product page suitable for
+   GitHub Pages, not a slide deck. Content is inherited: a capability
+   appears on the page only if BROCHURE.md carries it verified. The
+   section order is the story arc: **the problem in its own section,
+   stated and left unresolved** (never introduce and resolve the problem
+   in the same section); then what you get (user, benefit-first); using
+   it (user; real commands); running it (the owner band, warm-accent
+   shift); doors (one per cast member) plus the contributor pointer.
+   One voice throughout; sections change audience, never speaker. First
+   line is the sentinel (brochure-design.md); no index row for the
+   rendered file — BROCHURE.md's row carries the claims, the sentinel
+   keeps `scan` off the render.
 5. **README intro — hook plus link, never a restatement.** The README
    carries BROCHURE.md's one-sentence what-it-is verbatim (BROCHURE.md
    owns it) and a pointer. A restated capability list is the duplication
@@ -60,17 +69,20 @@ performer rule decides).
    BROCHURE.md's stamp SHA in its sentinel.
 7. **Leave it uncommitted** for human review, like every audit edit.
 
-## Strunk, elevated for this genre
+## Strunk, required for this genre
 
-Rule 12 (definite, specific, concrete) is the antidote to vapor; Rule 11
-(positive form) the antidote to over-hedged mush; Rule 13 (omit needless
-words); and Section V "Interesting": never announce that the product is
-exciting — make it so.
+Read `references/elements-of-style.md` (vendored, public domain) before
+drafting — this is a hard step, not a suggestion, and the verifier checks
+the result against it. Four rules are elevated to law here: Rule 12
+(definite, specific, concrete) is the antidote to vapor; Rule 11
+(positive form) the antidote both to over-hedged mush and to
+selling-by-negation; Rule 13 (omit needless words); and Section V
+"Interesting": never announce that the product is exciting — make it so.
 
 ## Revision
 
-"Validate and revise BROCHURE.md" (or the brochure) re-enters here via
-single-doc.md's escalation — the genre's craft law applies to revisions,
-not only births. Routine restamps by maintenance flows trigger the
-regeneration rule (hub): sentinel SHA vs. stamp SHA, re-render on
-mismatch.
+"Validate and revise BROCHURE.md" (or the brochure site) re-enters here
+via single-doc.md's escalation — the genre's craft law applies to
+revisions, not only births. Routine restamps by maintenance flows trigger
+the regeneration rule (hub): the site's sentinel SHA vs. BROCHURE.md's
+stamp SHA, re-render on mismatch.

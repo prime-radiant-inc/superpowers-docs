@@ -41,6 +41,6 @@ control surfaces, what it costs to run>
 
 <two paths: the user's (enroll/use) and the owner's (deploy guide pointer)>
 
-<!-- brochure.html is rendered from this file by the superpowers-docs
-documentation skill; re-render on stamp-SHA mismatch (see the sentinel in
-brochure.html). -->
+<!-- The brochure site (docs/index.html) is rendered from this file by
+the superpowers-docs documentation skill; re-render on stamp-SHA mismatch
+(see the sentinel in docs/index.html). -->

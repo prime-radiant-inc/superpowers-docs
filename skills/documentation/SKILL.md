@@ -32,7 +32,7 @@ Study first, scaled to the request (next section), then the row:
 | "Validate and revise <doc>" — one named doc | `references/single-doc.md` | micro, escalates |
 | Writing a brand-new engineering/contributor doc; "where does this doc go?" | `references/new-docs.md` | standard |
 | User-facing docs: getting started, tutorial, how-to, user reference | `references/user-docs.md` | standard; set redesign: full |
-| Adopter-facing: BROCHURE.md, brochure.html, README intro, positioning | `references/marketing.md` | full |
+| Adopter-facing: BROCHURE.md, the brochure site, README intro, positioning | `references/marketing.md` | full |
 
 These are hard gates: do not start a flow from memory of this table. Flows
 add process; the law below binds all of them and is never restated in flow
@@ -190,16 +190,22 @@ it exists today; otherwise the claim is roadmap.
   whoever bears them — never sell one reader's burden as another
   reader's benefit. "It's just marketing" is the rationalization this
   skill exists to kill.
-- **Story law** (adopter artifacts): the problem beat is load-bearing and
-  must cash like any claim; one controlling idea, written down before
-  composing; every beat turns — a slide that leaves the reader where it
-  found them is cut. Structure from the storytellers' canon, facts from
-  the repo (`references/marketing.md`).
+- **Story law** (adopter artifacts): the problem beat is load-bearing,
+  must cash like any claim, and **stands in its own beat — stated and
+  left unresolved there**, never introduced and answered in the same
+  breath; one controlling idea, written down before composing; every
+  beat turns — a section that leaves the reader where it found them is
+  cut. Structure from the storytellers' canon, facts from the repo
+  (`references/marketing.md`).
 - **Prose law.** The writing step uses
-  elements-of-style:writing-clearly-and-concisely where available, in the
-  resolved project voice (`references/voice.md`: the project's `## Voice`
-  dictionary section, else a preset — default the engineer). The
-  independent verifier checks voice exactly as it checks claims.
+  elements-of-style:writing-clearly-and-concisely where available — and
+  for adopter-facing artifacts the vendored copy at
+  `references/elements-of-style.md` is **required reading before
+  drafting**, no availability escape. Writing happens in the resolved
+  project voice (`references/voice.md`: the project's `## Voice`
+  dictionary section, else a preset — the publication writer for
+  adopter artifacts, the engineer everywhere else). The independent
+  verifier checks voice exactly as it checks claims.
 
 ## Artifacts: dictionary and index
 
@@ -261,11 +267,11 @@ verified — and any evergreen claim you could *not* verify this pass,
 including claims whose ground truth lives outside the repo, counts toward
 `--deferred N`. Never let an unverified claim ride under a clean stamp.
 
-**Regeneration rule.** `docs/brochure.html` is rendered from
-`docs/BROCHURE.md` and carries a first-line sentinel naming BROCHURE.md's
-stamp SHA. **Any flow that restamps BROCHURE.md** — write-path,
-incremental, and audit included — compares the brochure's sentinel SHA to
-the new stamp SHA and re-renders on mismatch
+**Regeneration rule.** The brochure site (`docs/index.html`) is rendered
+from `docs/BROCHURE.md` and carries a first-line sentinel naming
+BROCHURE.md's stamp SHA. **Any flow that restamps BROCHURE.md** —
+write-path, incremental, and audit included — compares the site's
+sentinel SHA to the new stamp SHA and re-renders on mismatch
 (`references/marketing.md`, `references/brochure-design.md`). One skill
 owns both artifacts; a restamp without the re-render check is a defect,
 not an accepted cost.
@@ -324,10 +330,10 @@ not an accepted cost.
   globs only.
 - Editing docs in a project with no confirmed index `Class` column. → Run
   audit Phase 0 first.
-- About to render `brochure.html` with no governed `BROCHURE.md` behind
-  it. → The deck inherits; it never originates (marketing.md).
-- A deck slide without a citation footer. → Every slide cites the doc
-  that verifies it.
+- About to render the brochure site with no governed `BROCHURE.md`
+  behind it. → The render inherits; it never originates (marketing.md).
+- A brochure-site section without a citation line. → Every section cites
+  the doc that verifies it.
 - About to **commit** doc work nobody reviewed. → Verified ≠ reviewed;
   every flow leaves edits uncommitted.
 - "While I'm in here" — about to write a CLAUDE.md, an extra doc, or fill
@@ -362,12 +368,12 @@ not an accepted cost.
 | "Scan found zero hits, the exception is resolved." | A grep miss is not resolution — confirm via `git log -S` first; `[permanent]` exceptions are never removed on scan evidence. |
 | "It's a tiny doc edit, stamping without a verifier is fine." | The stamp *means* independently verified. No verifier, no stamp. |
 | "The docs feel incomplete, I'll add a doc for each gap." | Gaps are findings. A doc with no reader is debt, not coverage. |
-| "It's a brochure — the HTML is the artifact, I'll write it directly." | The render inherits from governed BROCHURE.md; claims live where stamps reach. No source doc, no deck. |
+| "It's a brochure — the HTML is the artifact, I'll write it directly." | The render inherits from governed BROCHURE.md; claims live where stamps reach. No source doc, no render. |
 | "The work is verified, so I'll commit it." | Verified ≠ reviewed. Every flow leaves the tree uncommitted for the human. |
 | "While I'm in here, I'll also write the CLAUDE.md / fill the gaps." | Gaps are findings; a doc no one asked to read is debt. New docs get the born-doc gate. |
 | "Getting started obviously means: clone the repo." | That's the contributor's first success. Name the primary reader; order paths by *their* journey. |
 | "The docs are in shape — every claim verifies." | Per-doc truth ≠ the right portfolio. Study asks who reads, what's missing, what's mis-addressed. |
-| "The deck needs to be compelling, so the language has to lift." | The fact carries the excitement (voice law). Uncashed lift is the slop this skill bans. |
+| "The page needs to be compelling, so the language has to lift." | A concrete benefit carries its own excitement (voice law). Uncashed lift is the slop this skill bans. |
 
 ## Common mistakes
 
