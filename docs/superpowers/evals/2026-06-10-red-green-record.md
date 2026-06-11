@@ -121,6 +121,33 @@ The plugin led with all five and then ran the same truth-repair machinery.
 Convergent judgments across both runs (ROADMAP reframe, PIT banners,
 install.sh exec bit) confirm the ported v1 core is intact.
 
+## GREEN 5 — marketing flow, end to end (clipfan brochure): PASS with one finding
+
+Same-day follow-up at the human's request — reopening the recorded
+"no brochure" decided gap (its rationale had gone stale; the repo is
+public). The flow produced governed `docs/BROCHURE.md` (template section
+shape; every capability cited; limitations tagged by bearer; stamped with
+11 honest external-truth deferrals) and an 18 KB self-contained
+`docs/brochure.html`: 11 slides, three acts + close, Act III warm-accent
+shift, per-slide citation footers, correct sentinel pinning the source
+stamp SHA (`scan` skips it; the regeneration cursor is armed). README got
+hook-plus-pointer only. The verifier pair (claims attacker + voice/story/
+design auditor) found zero fabrications — one rebuilt the binary and
+byte-checked the `--help` output — and 12 real craft defects (footer
+mis-citations, two deck details the source doc didn't carry, an X-not-Y
+over budget, an unmarked elision), all fixed and re-confirmed by a third
+agent before stamping. Render-verified in Chrome (hook + Act III).
+Decided-gaps record updated to show the human reopening, with the other
+gaps preserved.
+
+**Finding:** the worker skipped the batched cast/voice confirm, treating
+the human's launch instruction (which pre-authorized scope and audience)
+as the gate. Scope was indeed pre-answered; voice and cast were not — it
+self-resolved to the engineer default and flagged that for veto in its
+report. Candidate flow tightening (Iron Law applies before any edit): "a
+broad instruction is not the batch confirm; the gate asks its specific
+questions even when scope arrives pre-authorized."
+
 ## Operational lessons (run mechanics, not skill defects)
 
 - Never `tmux resize-window` while a worker's TUI modal is open — it
