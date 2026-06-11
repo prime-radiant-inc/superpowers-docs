@@ -60,8 +60,14 @@ microsoft/amplifier-bundle-stories `context/presentation-styles.md` and
 ## Citations (the honesty move, carried)
 
 Every content section ends with a muted citation line naming the doc
-sections that cash it: `docs/X.md §Y · verified @ <sha>`. A section
-without a citation line does not ship.
+sections that back it. The label is **`Sources:`** — never internal law
+vocabulary ("cashes", "enacting surface", "verified-the-verb"); the
+reader of this page has not read this skill, and skill jargon in copy is
+a voice defect. Format: `Sources: docs/X.md §Y · README §Z · as of
+<sha>`. Keep it quiet: one size below the body floor
+(`clamp(10px, 1.4vw, 12px)`), `rgba(255,255,255,0.5)` on black (≈5.3:1,
+still AA), no uppercase, no border. A section without a citation line
+does not ship; a citation line that shouts defeats its purpose.
 
 ## Typography, color, accessibility
 
