@@ -194,6 +194,14 @@ all fixed before the stamp (3 honest external-truth deferrals). One run
 mechanic: the worker ended a turn mid-plan once and needed a "continue"
 nudge — harness behavior, not flow text.
 
+**RED 8 (minor, owner review of GREEN 7):** the citation label read
+"Cashes against" — internal law vocabulary leaked into reader-facing
+copy — and the lines were too loud. The standard now pins the label
+(`Sources:`), a plain-English tail (`as of <sha>`), and quieter styling
+(one size below body, 0.5 alpha, still AA), plus the rule that skill
+jargon in copy is a voice defect. Artifact re-rendered in place
+(BROCHURE.md untouched, stamp SHA unchanged).
+
 ## Operational lessons (run mechanics, not skill defects)
 
 - Never `tmux resize-window` while a worker's TUI modal is open — it
