@@ -214,6 +214,35 @@ jargon in copy is a voice defect. Artifact re-rendered in place
   the v1 eval's Terms-vs-Names casing lesson; candidate dictionary.md
   guidance for a future revision (Iron Law applies).
 
+## GREEN 8 — slackline, full bootstrap + ship by one worker (2026-06-11): PASS with two escapes caught downstream
+
+A second from-zero project (a Go CLI, then private, now public). One
+Opus worker ran the whole loop — 3 born docs, 6 audited+stamped
+evergreen docs, 12 confirmed defect fixes, a brochure stamped with 0
+deferrals (real `--help` output only; no fabricated workspace JSON) —
+then a follow-up directive round (owner's verdicts) landed a real code
+fix the audit surfaced (cobra usage errors now exit 4, TDD'd) and an
+AGENTS.md→CLAUDE.md symlink. Shipped to main; at release the repo went
+public and the site listing rendered the brochure mechanically.
+
+**Escape 1 (story law, the one that matters):** the brochure shipped
+with the problem paragraph sitting *under the "What you get" promise
+heading* — the exact RED 6 defect — and the run's independent verifier
+described it as "an isolated problem beat." Caught at publish time by
+the controller applying the owner's standing RED 6 directive; fixed as
+a pure section split (no wording changes), independently re-verified,
+restamped. Candidate flow edit (Iron Law applies before any text
+changes): the marketing verifier needs the section plan as a *checked
+item* — "the problem beat occupies its own unresolved section" — not
+prose it can wave through.
+
+**Escape 2 (run ops, not skill text):** the controller's auto-nudge
+text "Continue to completion" was read as a user-priority instruction
+to skip the batched human gate; the worker took the gate decisions
+autonomously (it erred to the safe side exactly as the law prescribes,
+and the decisions held up on review). Nudge text must preserve gates
+explicitly: "continue; pause at genuine human gates."
+
 ## Known-noise note
 
 Workers log "PreToolUse hook error — hookSpecificOutput missing
