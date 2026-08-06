@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: superpowers-docs
+  description: Documentation-department-in-a-box plugin — studies a project and its readers, decides the doc portfolio, writes verified docs, and keeps them true
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    prime-radiant.com/repo-map-rev: "d284869aebeff3426a6ccd3bc318bbb4059034a9"
+  tags: [python, documentation, claude-plugin]
+spec:
+  type: tool
+  lifecycle: experimental
+  owner: user:obra
+  system: superpowers
