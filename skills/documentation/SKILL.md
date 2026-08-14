@@ -265,7 +265,10 @@ verifiers (Phase 3); diff- or worklist-bounded flows use at least one
 independent verifier. Don't stamp point-in-time docs. Stamp only what you
 verified — and any evergreen claim you could *not* verify this pass,
 including claims whose ground truth lives outside the repo, counts toward
-`--deferred N`. Never let an unverified claim ride under a clean stamp.
+`--deferred N`. Name the deferred claims in an HTML comment above the
+stamp block — a bare count tells the next auditor (and the reader)
+nothing about which statements to discount. Never let an unverified
+claim ride under a clean stamp.
 
 **Regeneration rule.** The brochure site (`docs/index.html`) is rendered
 from `docs/BROCHURE.md` and carries a first-line sentinel naming

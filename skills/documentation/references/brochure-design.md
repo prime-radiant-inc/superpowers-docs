@@ -52,10 +52,18 @@ microsoft/amplifier-bundle-stories `context/presentation-styles.md` and
    and operate, the trust mechanisms, limitations tagged by bearer.
    The register shift is signposted by the accent and the section
    kicker.
-6. **Doors**: one clear next step per cast member (try it / deploy it),
+6. **Fit** (both cast members): who it's for, by role, and who it's NOT
+   for, carried from BROCHURE.md's fit section. The when-not-to-adopt
+   half is the page's honesty made visible; a render that drops this
+   section is defective (a real render lost it and shipped only the
+   sell — the reviewer caught it, not the pipeline).
+7. **Doors**: one clear next step per cast member (try it / deploy it),
    plus the one-line contributor pointer. No sentimental closer.
-7. **Footer**: license, repository link, and the verification line
-   ("claims verified @ <sha>; see docs/BROCHURE.md").
+8. **Footer**: license, repository link, and the verification line
+   ("claims verified @ <sha>; see docs/BROCHURE.md"). The inheritance
+   rule (marketing.md) has no footer exemption: BROCHURE.md carries the
+   license fact (cited to the LICENSE file) or the footer doesn't state
+   one.
 
 ## Citations (the honesty move, carried)
 

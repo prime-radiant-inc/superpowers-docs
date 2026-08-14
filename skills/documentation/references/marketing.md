@@ -44,7 +44,14 @@ performer rule decides).
    role incl. who it's NOT for; limitations each tagged by who bears
    them; getting started, one path per cast member. **Owns rule:** the
    enacting surfaces of the capabilities it names — not the whole tree.
-   Every capability bullet carries its cash.
+   Every capability bullet carries its cash. A recorded session's output
+   often depends on environment facts (the directory name feeding a
+   scaffold, tool versions, an available local checkout): state every
+   fact the shown output depends on, or the reader's replay diverges
+   from the "real session" and the realness claim curdles. And a real
+   transcript is carried whole — eliding an inconvenient line (a
+   warning, an error) from output labeled real is fabrication, not
+   tidying.
 4. **Render the brochure site, `docs/index.html`**, per
    brochure-design.md — a single scrolling product page suitable for
    GitHub Pages, not a slide deck. Content is inherited: a capability
